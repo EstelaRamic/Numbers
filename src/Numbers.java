@@ -126,8 +126,9 @@ public class Numbers {
 		System.out.println("_________________________________________");
 		System.out.println("1. Print prime numbers less than 1000");
 		System.out.println("2. Display the first 100 emirps");
-		System.out.println("3. Print Marsenne primes");
-		System.out.println("4. Print Armstrong numbers less than 1000");
+		System.out.println("3. Display Fibonacci  numbers less than 100");
+		System.out.println("4. Print Marsenne primes");
+		System.out.println("5. Print Armstrong numbers less than 1000");
 		System.out.println("_________________________________________");
 
 		int izbor=unos.nextInt();
@@ -138,10 +139,13 @@ public class Numbers {
 		case 2:
 			displayEmirps();
 			break;
-		case 3: 
+		case 3:
+			displayFibonacci();
+			break;
+		case 4: 
 			printMersennePrimes();
 			break;
-		case 4:
+		case 5:
 			printArmstrongNumbers();
 			break;
 
