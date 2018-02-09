@@ -69,11 +69,19 @@ public class Numbers {
 	
 //	Write method that will Display Fibonacci  numbers less than 100. The Fibonacci Sequence is a series of integers. The first two numbers in the sequence are both 1 ; after that, each number is the sum of the preceding two numbers. 1, 1, 2, 3, 5, 8...
 	public static void displayFibonacci(){
+		int a=1;
+		int b=1;
+		while (a<=100 && b<=100) {
+			System.out.println(a);
+			System.out.println(b);
+			a+=b;
+			b+=a;
+		}
 		
 	}
 	
 //	Write method that prints Marsenne primes. A prime number is called a Mersenne prime if it can be written in the form 2p - 1 for some positive integer p. Write a program that finds all Mersenne primes with p < =31
-	public static void printMarsennePrimes(){
+	public static void printMersennePrimes(){
 		
 	}
 	
