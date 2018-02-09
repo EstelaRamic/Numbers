@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Numbers {
 
@@ -43,17 +44,63 @@ public class Numbers {
 	
 //	Write method that prints Marsenne primes. A prime number is called a Mersenne prime if it can be written in the form 2p - 1 for some positive integer p. Write a program that finds all Mersenne primes with p < =31
 	public static void printMarsennePrimes(){
-		
+		return primes;
 	}
 	
 //	Write method that prints Armstrong numbers less than 1000.  of three digits is an integer such that the sum of the cubes of its digits is equal to the number itself. For example, 371 is an Armstrong number since 3**3 + 7**3 + 1**3 = 371.
 	public static void printArmstrongNumbers(){
-		
+		int num,rem,sum = 0;
+		System.out.println("Armstrong numbers are:");
+		for (int i = 1; i <= 1000; i++)
+		{
+			num = i;
+			while (num > 0)
+			{
+				rem = num % 10;
+				sum = sum + (rem*rem*rem);
+				num = num / 10;
+			}
+	 
+			if (sum == i)
+			{
+				System.out.print(i + " ");
+			}
+			sum = 0;
+		}
 	}
 	
 //	Write main method that will ask user to choose what method will he use. Ex. if user chose that he wants Marsenne primes that will be option D.
 	public static void main(String[] args) {
-		
+		Scanner unos = new Scanner(System.in);
+		System.out.println ("Choose number for:");
+		System.out.println("_________________________________________");
+		System.out.println("1. Print prime numbers less than 1000");
+		System.out.println("2. Display the first 100 emirps");
+		System.out.println("3. Print Marsenne primes");
+		System.out.println("4. Print Armstrong numbers less than 1000");
+		System.out.println("_________________________________________");
+
+		int izbor=unos.nextInt();
+		switch (izbor) {
+		case 1:
+			printPrimes();
+			break;
+		case 2:
+			displayEmirps();
+			break;
+		case 3: 
+			printMarsennePrimes();
+			break;
+		case 4:
+			printArmstrongNumbers();
+			break;
+
+		default:
+			System.out.println("Wrong input!");
+			break;
+			
+		}
+		unos.close();
 	}
 
 }
