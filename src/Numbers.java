@@ -84,7 +84,7 @@ public class Numbers {
 	
 //	Write main method that will ask user to choose what method will he use. Ex. if user chose that he wants Marsenne primes that will be option D.
 	public static void main(String[] args) {
-		
+		//printPrimes();
 	}
 
 }
