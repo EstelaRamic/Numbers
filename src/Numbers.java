@@ -83,7 +83,12 @@ public class Numbers {
 	
 //	Write method that prints Marsenne primes. A prime number is called a Mersenne prime if it can be written in the form 2p - 1 for some positive integer p. Write a program that finds all Mersenne primes with p < =31
 	public static void printMersennePrimes(){
-		
+		for(int p=2; p<=31;p++){
+			int mersenn=(int)Math.pow(2, p)-1;
+			if (isPrime(mersenn)){
+				System.out.printf("%4s ", mersenn);
+			}
+		}
 	}
 	
 //	Write method that prints Armstrong numbers less than 1000.  of three digits is an integer such that the sum of the cubes of its digits is equal to the number itself. For example, 371 is an Armstrong number since 3**3 + 7**3 + 1**3 = 371.
